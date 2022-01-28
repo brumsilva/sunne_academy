@@ -1,0 +1,27 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+  justify-content: space-between;
+}
+
+.mat-list-item:active, .mat-list-item:focus-visible {
+  background: var(--bg-color);
+  color: white;
+}
+
+.mat-toolbar.mat-primary.mat-toolbar-single-row {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  justify-content: flex-end !important;
+  background: var(--bg-color) !important;
+}
+
+

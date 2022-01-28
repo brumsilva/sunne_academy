@@ -1,0 +1,35 @@
+<main class="singin-bg">
+    <mat-card class="loginContainer">
+      <img src="../../../../assets/img/SunneLogo.png" alt="Sunne_Logo" class="loginContainer_logo">
+      <h1>Seja Bem-vindo(a) à SunneAcademy</h1>
+      <h4>Sua Plataforma de Aprendizagem Continuada</h4>
+
+      <form class="example-form">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Email:</mat-label>
+          <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                 placeholder="exemplo@sunne.com.br"
+                 [(ngModel)]="user.email" name="email">
+          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Insira um endereço de e-mail válido.
+          </mat-error>
+          <mat-error *ngIf="emailFormControl.hasError('required')">
+            O E-mail é <strong>obrigatório.</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Senha:</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="user.password" name="password">
+          <mat-error *ngIf="passwordFormControl.hasError('required')">
+            A senha é <strong>obrigatório.</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <div class="example-button-row">
+          <button mat-flat-button color="primary" routerLink="home" (click)="login()">Entrar</button>
+          <button mat-stroked-button color="primary">Cancelar</button>
+        </div>
+      </form>
+    </mat-card>
+</main>

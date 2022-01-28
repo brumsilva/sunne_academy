@@ -1,0 +1,99 @@
+.container1
+  display: flex
+  flex-wrap: wrap
+  gap: 30px
+  justify-content: center
+  align-items: center
+  padding: 40px
+
+.livro
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    gap:30px
+    background-color:#fff
+    width: 280px
+    height: 450px
+    padding: 20px 30px
+    border-radius: 4px
+    text-decoration: none
+    color: hsl(0, 0%, 21%)
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)
+
+
+
+    &:hover
+      -webkit-transform: scale3d(1.05, 1.05, 1.05)
+      transform: scale3d(1.05, 1.05, 1.05)
+      box-shadow: 0px 1px 10px hsl(0, 0%, 71%)
+      animation: .9s
+
+    &_card
+      h2
+        font-size: 18px
+        font-style: italic
+        padding: 8px 0px 10px 0px
+      h4
+        font-size: 16px
+        font-weight: normal
+        margin-bottom: 10px
+      ul
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: center
+        gap: 10px
+        width: 100%
+        li
+          background-color: #efefef
+          font-size: 10px
+          display: flex
+          justify-content: center
+          align-items: center
+          padding: 10px 8px
+          width: 100px
+          border-radius: 20px
+          margin: 8px 0px 8px 0px
+    &_dates
+      display: flex
+      gap: 10px
+      justify-content: center
+      align-items: center
+      font-size: 12px
+      font-weight: normal
+    &_btn
+      display: flex
+      width: 100%
+      gap: 30px
+      justify-content: center
+
+    .livro_img
+      display: flex
+      align-items: center
+      justify-content: center
+      background-image: url('/assets/img/Bolinhas.png')
+      background-size: contain
+      background-repeat: no-repeat
+      background-position-x: right
+      background-position-y: center
+      background-size: contain
+      margin-top: 0
+
+
+.modal-container-content
+  display: flex
+  justify-content: space-evenly
+  align-items: center
+  background: rgba(39, 36, 36, 0.829)
+  max-width: 950px
+  padding: 15px
+  border-radius: 10px
+  position: absolute
+  padding: 20px
+  bottom: 104px
+  gap: 10px
+  right: 30px
+  // animation: popup-animation
+  h1
+    margin: 0

@@ -1,0 +1,37 @@
+<div class="container1">
+  <ng-template
+  ngFor let-livro [ngForOf]="livros">
+    <div class="livro">
+      <section class="livro_card">
+        <h2 class="livro_title">{{ livro.name }}</h2>
+        <h4>{{livro.author}}</h4>
+
+        <ul>
+          <li><strong>Gênero-</strong>{{livro.gender}}</li>
+          <li><strong>Leitura-</strong>  {{livro.type}}</li>
+          <li style="background:#1D0947; color: #fff;"><strong>Locatário-</strong>{{livro.tenant}}</li>
+        </ul>
+
+        <div class="livro_dates">
+          <h5>Locação:</h5> <h6>{{livro.date}}</h6>
+          <h5>Devolução:</h5> <h6>{{livro.devolution}}</h6>
+        </div>
+      </section>
+      <section class="livro_img">
+        <img class="livro_img_img"
+        [src]="livro.photo"
+        [alt]="livro.name"
+        style="width: 120px;"
+        >
+      </section>
+      <section class="livro_btn">
+
+        <a class="navbar-item">
+          <button mat-flat-button color="primary" (click)="editar(livro.id)">Editar</button>
+        </a>
+        <a class="navbar-item">
+          <button mat-flat-button color="accent" (click)="confirmarAcao(livro.id)">Registrar Devolução</button>
+        </a>
+      </section>
+    </div>
+  <ng-template>

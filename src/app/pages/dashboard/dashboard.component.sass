@@ -1,0 +1,104 @@
+.container
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  margin-top: 30px
+  gap: 50px
+
+  &_MainCard
+    display: flex
+    flex-wrap: wrap
+    gap: 50px
+    justify-content: space-evenly
+    background-color: #fff
+    width: 80%
+    padding: 20px 30px
+    border-radius: 4px
+    text-decoration: none
+    color: hsl(0, 0%, 21%)
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)
+
+    &_Item
+      canvas
+        width: 700px
+      h3
+        font-size: 22px
+        margin-bottom: 30px
+
+    &_Item_Cards
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      gap: 10px
+      margin-top: 30px
+.livro
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: space-evenly
+  gap: 30px
+  background-color: #fff
+  width: 280px
+  height: 450px
+  padding: 20px 30px
+  border-radius: 4px
+  text-decoration: none
+  color: hsl(0, 0%, 21%)
+  box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)
+
+  &_card
+    h2
+      font-size: 18px
+      font-style: italic
+      padding: 8px 0px 10px 0px
+      h4
+        font-size: 16px
+        font-weight: normal
+        margin-bottom: 10px
+      ul
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: center
+        gap: 10px
+        width: 100%
+        li
+          background-color: #efefef
+          font-size: 10px
+          display: flex
+          justify-content: center
+          align-items: center
+          padding: 10px 8px
+          width: 100px
+          border-radius: 20px
+          margin: 8px 0px 8px 0px
+    &_dates
+      display: flex
+      gap: 10px
+      justify-content: center
+      align-items: center
+      font-size: 12px
+      font-weight: normal
+    &_btn
+      display: flex
+      width: 100%
+      gap: 30px
+      justify-content: center
+
+    .livro_img
+      display: flex
+      align-items: center
+      justify-content: center
+      background-image: url('/assets/img/Bolinhas.png')
+      background-size: contain
+      background-repeat: no-repeat
+      background-position-x: right
+      background-position-y: center
+      background-size: contain
+      margin-top: 0
+
+h1
+  font-size: 46px
+  text-align: center
+  margin: 30px
+

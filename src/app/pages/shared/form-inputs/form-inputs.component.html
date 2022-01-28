@@ -1,0 +1,57 @@
+<div *ngIf="verificarStatus;then Texto1 else Texto2"></div>
+<ng-template #Texto1>
+  <h1>Alugar Livro</h1>
+</ng-template>
+<ng-template #Texto2>
+  <h1>Atualizar Dados</h1>
+</ng-template>
+<form [formGroup]="form">
+  <mat-form-field appearance="outline">
+    <mat-label>Nome do Livro:</mat-label>
+    <input matInput formControlName="name">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Autor:</mat-label>
+    <input matInput formControlName="author">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Gênero</mat-label>
+    <mat-select formControlName="gender">
+      <mat-option value="Ação">Tecnologia</mat-option>
+      <mat-option value="Empreendedorismo">Empreendedorismo</mat-option>
+      <mat-option value="Energias Renováveis">Energias Renováveis</mat-option>
+      <mat-option value="Outros">Outros</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Tipo de Leitura</mat-label>
+    <mat-select formControlName="type">
+      <mat-option value="Ação">Simples</mat-option>
+      <mat-option value="Moderada">Moderada</mat-option>
+      <mat-option value="Avançada">Avançada</mat-option>
+      <mat-option value="Outros">Outros</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Locatário:</mat-label>
+    <input matInput formControlName="tenant">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Data da Locação:</mat-label>
+    <input matInput formControlName="date">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Data da Devolução:</mat-label>
+    <input matInput formControlName="devolution">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Adicione o Link da Imagem do Livro</mat-label>
+    <textarea matInput formControlName="photo"></textarea>
+  </mat-form-field>
+    <div class="button-row">
+      <div *ngIf="verificarStatus;then Alugar else Editar"></div>
+      <ng-template #Alugar><button mat-flat-button color="primary" (click)="modificar()">Adicionar Livro</button></ng-template>
+      <ng-template #Editar><button mat-flat-button color="primary" (click)="modificar()">Atualizar Dados</button></ng-template>
+      <button mat-flat-button color="accent">Cancelar</button>
+    </div>
+</form>

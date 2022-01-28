@@ -1,0 +1,49 @@
+@use '../../../../config_sass/variables.sass'
+:root
+  font-family: 'Poppins', sans-serif
+
+.singin-bg
+  display: flex
+  height: 100%
+.loginContainer
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  gap: 10px
+  max-width: 900px
+  margin: auto
+  padding: 40px 25px
+
+  &_logo
+    max-width: 200px
+
+  form
+    margin-top: 20px
+    display: flex
+    flex-direction: column
+    gap: 10px
+
+  &_input
+    width: 60%
+
+  mat-form-field
+    .mat-form-field-appearance-outline .mat-form-field-outline
+      color: black
+
+  .example-button-row
+    display: flex
+    flex-direction: row
+    justify-content: center
+    gap: 10px
+    width: 100%
+
+    button
+      width: 100%
+
+  h1
+    font-size: 18px
+  h4
+    font-weight: normal
+    font-size: 12px
+

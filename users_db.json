@@ -1,0 +1,16 @@
+{
+    "Adm": [
+      {
+            "id": 1,
+            "email": "adm@sunne.com.br",
+            "password":"12345"
+      }
+    ],
+    "Usuario": [
+        {
+            "id": 2,
+            "email": "user@sunne.com.br",
+            "password":"12345"
+        }
+    ]
+}
